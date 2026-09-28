@@ -11,8 +11,6 @@ services:
       MYSQL_DATABASE: medicare_practice_db
       MYSQL_USER: medicare_user
       MYSQL_PASSWORD: medicare_password
-    ports:
-      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
