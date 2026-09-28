@@ -16,7 +16,7 @@ A production-style healthcare practice management web application engineered for
 9. [Getting Started & Setup](#getting-started--setup)
 10. [Demo Credentials](#demo-credentials)
 11. [Running Automated Tests](#running-automated-tests)
-12. [ModMed Technical Interview Defense Guide](#modmed-technical-interview-defense-guide)
+
 
 ---
 
