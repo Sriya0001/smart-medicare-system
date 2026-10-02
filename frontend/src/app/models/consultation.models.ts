@@ -66,3 +66,20 @@ export interface AiSummary {
   rawExecutiveSummary: string;
   isAiGenerated: boolean;
 }
+
+export interface MedicationPlainExplanation {
+  medicationName: string;
+  purpose: string;
+  howToTake: string;
+  commonSideEffects: string;
+}
+
+export interface PrescriptionExplanation {
+  prescriptionId: number;
+  overview: string;
+  medications: MedicationPlainExplanation[];
+  dietaryAndLifestyleAdvice: string;
+  whenToCallDoctor: string;
+  isAiGenerated: boolean;
+}
+

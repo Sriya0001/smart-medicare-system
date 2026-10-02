@@ -80,4 +80,31 @@ public class PrescriptionDTOs {
 
         private String notes;
     }
+
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class MedicationPlainExplanationDTO {
+        private String medicationName;
+        private String purpose;
+        private String howToTake;
+        private String commonSideEffects;
+    }
+
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class PrescriptionExplanationDTO {
+        private Long prescriptionId;
+        private String overview;
+        private List<MedicationPlainExplanationDTO> medications;
+        private String dietaryAndLifestyleAdvice;
+        private String whenToCallDoctor;
+        private boolean isAiGenerated;
+    }
 }
+

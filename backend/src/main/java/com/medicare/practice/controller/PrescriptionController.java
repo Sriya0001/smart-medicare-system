@@ -39,6 +39,13 @@ public class PrescriptionController {
         return ResponseEntity.ok(prescriptionService.getPrescriptionById(id));
     }
 
+    @GetMapping("/{id}/explain")
+    @PreAuthorize("hasAnyRole('ADMIN', 'DOCTOR', 'PATIENT')")
+    @Operation(summary = "Get plain-language patient explanation for a prescription (AI powered)")
+    public ResponseEntity<PrescriptionExplanationDTO> getPrescriptionExplanation(@PathVariable Long id) {
+        return ResponseEntity.ok(prescriptionService.explainPrescription(id));
+    }
+
     @PostMapping
     @PreAuthorize("hasAnyRole('ADMIN', 'DOCTOR')")
     @Operation(summary = "Create an electronic prescription")
